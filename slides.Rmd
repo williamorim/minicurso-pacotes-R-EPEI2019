@@ -1,0 +1,76 @@
+---
+title: "3º Encontro da Pós-Graduação em Estatística do IME-USP"
+subtitle: "<span style = 'color: orange'> Criando pacotes em R</span>"
+author: "William Amorim"
+institute: "Ex-aluno IME-USP <br> R6/Curso-R"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      self_contained: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: middle, center
+
+# [colocar aqui o link do material]()
+
+---
+# Vamos equipar o nosso R para fazermos pacotes
+
+```{r, eval = FALSE}
+install.packages(c(
+  "devtools", 
+  "roxygen2", 
+  "testthat", 
+  "covr", 
+  "knitr"
+))
+```
+
+---
+# (Opcional) Vamos criar uma conta no github
+
+.pull-left[
+[<img src = "img/logo-github.png">](https://github.com/)
+<center>
+<p style = "font-size: 14px">Clique no gato-polvo para entrar no site!</p>
+</center>
+]
+
+.pull-right[
+## Motivos
+
+<h3 style = "color: #007fff">1. Back-up e versionamento</h3>
+
+
+<h3 style = "color: #007fff">2. Compartilhar o trabalho</h3>
+
+
+<h3 style = "color: #007fff">3. </h3>
+]
+
+---
+# Vamos conhecer mais sobre pacotes!
+
+```{r, eval = FALSE}
+
+.Library
+
+# Caminho onde o R vai procurar os seu pacotes instalados.
+.libPaths()
+installed.packages()
+```
+
+
+
+
+
+
+
