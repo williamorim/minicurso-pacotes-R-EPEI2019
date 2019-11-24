@@ -64,12 +64,108 @@ install.packages(c(
 ---
 # Vamos conhecer mais sobre pacotes!
 
+&lt;br&gt;
+
+&gt; Um pacote é um conjunto de funções que têm como objetivo resolver um problema em específico.
+
+&lt;br&gt;
+
 
 ```r
+# Biblioteca padrão da sua instalação do R
 .Library
+
+# Caminho onde o R vai procurar os seu pacotes instalados.
 .libPaths()
+
+# Lista os pacotes que você tem instalado
 installed.packages()
 ```
+
+---
+# R base
+
+Quando instalamos o R, ele vem com aproximadamente
+
+- 14 pacotes básicos
+- 15 pacotes recomendados
+
+Você pode utilizar esses pacotes diretamente, sem instalá-los.
+
+
+```r
+library(lattice)
+```
+
+---
+# CRAN
+
+O CRAN é o repositório oficial de pacotes de R com aproximadamente 14 mil pacotes.
+
+Esses pacotes precisam ser instalados (baixar os arquivos do CRAN para o seu computador) e carregados na hora de usar:
+
+
+```r
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+---
+class: center, middle
+## Criando um pacote
+
+# usethis::create_package()
+---
+class: middle, center
+### Vamos criar o pacote "pastePlus"
+
+
+```r
+usethis::create_package(path = "~/Desktop/pastePlus")
+```
+---
+# Vamos escrever a nossa primeira função
+
+- Todas as funções do nosso pacote devem ser escritas em scripts `.R` dentro da pasta `R/`.
+
+- Podemos usar a função `usethis::use_r("nome-do-arquivo")` para facilitar essa tarefa.
+
+Vamos criar o arquivo `R/plus.R`.
+
+
+```r
+usethis::use_r("plus")
+```
+
+&lt;br&gt;
+
+Nesse arquivo, vamos redefinir o operador `+` para concatenar strings.
+
+---
+# Vamos testar a nossa função
+
+- Rodar a função no console ❌
+
+- `source("R/plus.R")` ❌
+
+- `devtools::load_all()` ✌️
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center style = "color: orange; font-weight: bold;"&gt;
+ATALHO: CMD/CTRL + SHIFT + L
+&lt;/center&gt;
+
+---
+class: center, middle
+### Fluxo de trabalho
+
+&lt;img src = "img/fluxo-de-trabalho.png"&gt;
+
+---
+class: center, middle
+&lt;img src = "img/arquivos-pacotes.png"&gt;
+---
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
