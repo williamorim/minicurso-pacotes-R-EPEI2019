@@ -19,7 +19,7 @@ options(htmltools.dir.version = FALSE)
 
 class: middle, center
 
-# [colocar aqui o link do material]()
+# [https://bit.ly/epei2019-pacotes](https://bit.ly/epei2019-pacotes)
 
 ---
 # Vamos equipar o nosso R para fazermos pacotes
@@ -28,8 +28,7 @@ class: middle, center
 install.packages(c(
   "devtools", 
   "roxygen2", 
-  "testthat", 
-  "covr", 
+  "testthat",
   "knitr"
 ))
 ```
@@ -105,7 +104,6 @@ library(tidyverse)
 
 ---
 class: center, middle
-## Criando um pacote
 
 # usethis::create_package()
 ---
@@ -155,6 +153,70 @@ class: center, middle
 
 ---
 class: center, middle
+
+# devtools::check()
+
+Avalie a consistência do pacote
+
+Cheque o seu pacote com frequência (não deixe apenas pro final!)
+
+Necessário (mas não suficiente) para o CRAN
+
+<br>
+<center style = "color: orange; font-weight: bold;">
+ATALHO: CMD/CTRL + SHIFT + E
+</center>
+---
+# DESCRIPTION
+
+- Metadados do seu pacote
+
+- Nela você pode colocar
+    - Autores
+    - Contato
+    - Descrição do pacote
+    - Dependências
+    - Licensa
+    
+<br>
+
+Vamos editar o **DESCRIPTION** do nosso pacote.
+
+Para acrescentar uma licensa, podemos usar a função `use_mit_license("Seu Nome")`.
+---
+class: center, middle
+
+# devtools::document()
+
+Documente as suas funções
+
+O pacote `roxygen2` transforma comentários em um `help`
+
+Use a opção *Code > Insert roxygen skeleton* do RStudio para adicionar um esqueleto da documentação.
+
+---
+class: center, middle
+
+# usethis::use_test()
+
+Crie testes automáticos para garantir sempre a validade do seu pacote
+
+Rode os testes usando `devtools::test_file()`
+
+---
+class: center, middle
+
+# devtools::install()
+
+Transforme seu *pacote fonte* em um pacote instalado
+
+Marca a transição de um pacote em desenvolvimento para um pacote em uso
+---
+
+---
+class: center, middle
 <img src = "img/arquivos-pacotes.png">
 ---
+
+
 
