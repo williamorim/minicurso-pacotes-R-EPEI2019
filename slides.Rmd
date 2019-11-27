@@ -90,10 +90,10 @@ class: center, middle
 # usethis::create_package()
 ---
 class: middle, center
-### Vamos criar o pacote "pastePlus"
+### Vamos criar o pacote "epei2019"
 
 ```{r, eval=FALSE}
-usethis::create_package(path = "~/Desktop/pastePlus")
+usethis::create_package(path = "epei2019")
 ```
 ---
 # Vamos escrever a nossa primeira função
@@ -102,15 +102,15 @@ usethis::create_package(path = "~/Desktop/pastePlus")
 
 - Podemos usar a função `usethis::use_r("nome-do-arquivo")` para facilitar essa tarefa.
 
-Vamos criar o arquivo `R/plus.R`.
+Vamos criar o arquivo `R/read.R`.
 
 ```{r, eval = FALSE}
-usethis::use_r("plus")
+usethis::use_r("read")
 ```
 
 <br>
 
-Nesse arquivo, vamos redefinir o operador `+` para concatenar strings.
+Nesse arquivo, vamos construir uma função para ler e empilhar todos os arquivos `.csv` contidos em uma pasta.
 
 ---
 # Vamos testar a nossa função
@@ -165,6 +165,15 @@ ATALHO: CMD/CTRL + SHIFT + E
 Vamos editar o **DESCRIPTION** do nosso pacote.
 
 Para acrescentar uma licensa, podemos usar a função `use_mit_license("Seu Nome")`.
+---
+class: center, middle
+
+# usethis::use_package()
+
+Defina as dependências do seu pacote
+
+(quais pacotes o usuário precisa ter instalado para o seu pacote funcionar)
+
 ---
 class: center, middle
 
@@ -232,7 +241,23 @@ class: center, middle
 
 ## Mais referências
 
+### [R Packages](http://r-pkgs.had.co.nz/) `r emo::ji("us")`
 
+### [Tutorial rápido para construção de pacotes](https://www.curso-r.com/blog/2017-09-07-pacote-miojo/) `r emo::ji("brazil")`
+---
+## Praticando
+
+1. Vamos generalizar a nossa função para ler excel e `.rds`.
+
+2. Vamos criar uma função que recebe uma base e devolve o nome das colunas que possuem `NA`.
+
+<br>
+
+- Não se esqueça do fluxo para testar as alterações.
+
+- Rode `devtools::check()` sempre que fizer uma mudança significativa.
+
+- Pense e crie testes automatizados para deixar o seu pacote consistente.
 
 
 
