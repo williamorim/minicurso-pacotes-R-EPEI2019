@@ -33,27 +33,9 @@ install.packages(c(
 ))
 ```
 
----
-# (Opcional) Vamos criar uma conta no github
+<br>
 
-.pull-left[
-[<img src = "img/logo-github.png">](https://github.com/)
-<center>
-<p style = "font-size: 14px">Clique no gato-polvo para entrar no site!</p>
-</center>
-]
-
-.pull-right[
-## Motivos
-
-<h3 style = "color: #007fff">1. Back-up e versionamento</h3>
-
-
-<h3 style = "color: #007fff">2. Compartilhar o trabalho</h3>
-
-
-<h3 style = "color: #007fff">3. </h3>
-]
+Ferramentas de desenvolvimento: [http://r-pkgs.had.co.nz/intro.html](http://r-pkgs.had.co.nz/intro.html)
 
 ---
 # Vamos conhecer mais sobre pacotes!
@@ -212,11 +194,45 @@ Transforme seu *pacote fonte* em um pacote instalado
 
 Marca a transição de um pacote em desenvolvimento para um pacote em uso
 ---
+class: center, middle
+<img src = "img/arquivos-pacotes.png">
+
+---
+# (Opcional) Vamos criar uma conta no github
+
+.pull-left[
+[<img src = "img/logo-github.png">](https://github.com/)
+<center>
+<p style = "font-size: 14px">Clique no gato-polvo para entrar no site!</p>
+</center>
+]
+
+.pull-right[
+## Motivos
+
+<h3 style = "color: #007fff">1. Back-up e versionamento</h3>
+
+
+<h3 style = "color: #007fff">2. Compartilhar o trabalho</h3>
+
+
+<h3 style = "color: #007fff">3. Disponibilizar o pacote para a comunidade</h3>
+]
 
 ---
 class: center, middle
-<img src = "img/arquivos-pacotes.png">
+
+## Tutoriais
+
+### [Criando repositórios no Github](https://www.curso-r.com/blog/2017-07-17-rstudio-e-github/) `r emo::ji("brazil")`
+
+### [Colocando seu pacote no Github](https://kbroman.org/pkg_primer/pages/github.html) `r emo::ji("us")`
 ---
+class: center, middle
+
+## Mais referências
+
+
 
 
 
